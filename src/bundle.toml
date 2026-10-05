@@ -1,0 +1,9 @@
+[[file]]
+source = "pages/README.md"      # under src/
+to = ["s2tdd-specify", "s2tdd-epic", "s2tdd-constitution"]
+as = "pages/README.md"          # inside each skill folder
+
+[[file]]
+source = "pages/WORKFLOW.md"
+to = ["s2tdd-specify", "s2tdd-epic", "s2tdd-constitution"]
+as = "pages/WORKFLOW.md"

@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  # Once per change: pull requests, and main after a merge (a branch push with a PR open
+  # would otherwise run twice).
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dev requirements
+        run: pip install -r requirements-dev.txt
+      - name: Check the build is current
+        run: python tools/build.py --check
+      - name: Run the checker
+        run: python tools/check.py
+      - name: Run the tests
+        run: pytest tests

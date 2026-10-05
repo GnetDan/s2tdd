@@ -1,0 +1,11 @@
+{
+  "name": "s2tdd",
+  "owner": { "name": "GnetDan" },
+  "plugins": [
+    {
+      "name": "s2tdd",
+      "source": "./",
+      "description": "s2tdd: spec to test-driven development — a spec drives the build, and the tests it leaves are the spec that survives."
+    }
+  ]
+}
